@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon | Ciny</title>
+    <title>Ciny | Coming Soon</title>
     <style>
         * {
             margin: 0;
@@ -19,10 +19,21 @@
             background-color: #333;
             font-family: Arial, sans-serif;
             color: #f4f4f4;
+            flex-direction: column;
         }
 
         .container {
-            text-align: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .side {
+            margin-left: 1rem;
+            flex-direction: column;
+            align-content: space-around;
+            text-align: left;
         }
 
         h1 {
@@ -34,12 +45,42 @@
             font-size: 1.2rem;
             color: #aaa;
         }
+
+        img {
+            width: 200px;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                flex-direction:column-reverse;
+                text-align: center;
+            }
+
+            .side {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+                text-align: center;
+            }
+
+            img {
+                margin-top: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Ciny</h1>
-        <p>Coming Soon</p>
+        <img src="cinema.jpg" alt="Cinema Image">
+        <div class="side">  
+            <h1>Ciny</h1>
+            <p>Coming Soon</p>
+        </div>
     </div>
 </body>
 </html>
